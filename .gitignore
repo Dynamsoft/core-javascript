@@ -41,7 +41,7 @@ yarn.lock
 /*.txt
 /.gitattributes
 /.*ignore
-/dynamsoft-camera-enhancer-js-*
+/dynamsoft-core-js-*
 /sampleFromGithub
 /src
 /doc
@@ -54,3 +54,4 @@ yarn.lock
 !/legal.txt
 !/package.json
 !/LICENSE
+
