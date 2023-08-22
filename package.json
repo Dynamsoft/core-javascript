@@ -30,6 +30,15 @@
       "email": "support@dynamsoft.com"
     }
   ],
+  "files": [
+		"/dist/*.js",
+		"/dist/*.mjs",
+		"/dist/*.html",
+		"/dist/*.wasm",
+		"/dist/**/*.d.ts",
+		"/API Reference.url",
+		"/LEGAL.txt"
+	],
   "keywords": [
     "dynamsoft",
     "core"
