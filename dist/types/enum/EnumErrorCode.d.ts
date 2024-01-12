@@ -60,9 +60,8 @@ export declare enum EnumErrorCode {
     EC_DOMAIN_NOT_MATCH = -10039,
     /**The reserved info does not match the reserved info bound in the current product key.*/
     EC_RESERVED_INFO_NOT_MATCH = -10040,
-    /**The License DLL is missing.*/
     /**The license key does not match the license content.*/
-    EC_LICENSE_KEY_NOT_MATCHED = -10043,
+    EC_LICENSE_KEY_NOT_MATCH = -10043,
     /**Failed to request the license content.*/
     EC_REQUEST_FAILED = -10044,
     /**Failed to init the license.*/
@@ -85,7 +84,7 @@ export declare enum EnumErrorCode {
     EC_STAGE_TYPE_INVALID = -10059,
     /**The image orientation is invalid.*/
     EC_IMAGE_ORIENTATION_INVALID = -10060,
-    /**Complex tempalte can't be converted to simplified settings.*/
+    /**Failed to convert complex tempalte to simplified settings.*/
     EC_CONVERT_COMPLEX_TEMPLATE_ERROR = -10061,
     /**Reject function call while capturing in progress.*/
     EC_CALL_REJECTED_WHEN_CAPTURING = -10062,
@@ -101,6 +100,15 @@ export declare enum EnumErrorCode {
     EC_MODULE_NOT_FOUND = -10065,
     /**The api does not support multi-page files. Please use FileFetcher instead.*/
     EC_MULTI_PAGES_NOT_SUPPORTED = -10066,
+    /**The file already exists but overwriting is disabled.*/
+    EC_FILE_ALREADY_EXISTS = -10067,
+    /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+    EC_CREATE_FILE_FAILED = -10068,
+    /**The input ImageData object contains invalid parameter(s).*/
+    EC_IMAGE_DATA_INVALID = -10069,
+    /**The dimensions of the input image do not meet the requirements.*/
+    /**The pixel format of the input image do not meet the requirements.*/
+    /**The section level result is irreplaceable.*/
     /** -20000~-29999: DLS license error code. */
     /**No license.*/
     EC_NO_LICENSE = -20000,
@@ -114,11 +122,8 @@ export declare enum EnumErrorCode {
     EC_DEVICE_NOT_MATCH = -20004,
     /**Failed to bind device. */
     EC_BIND_DEVICE_FAILED = -20005,
-    /**Interface InitLicenseFromDLS can not be used together with other license initiation interfaces. */
-    /**License Client dll is missing.*/
     /**Instance count is over limit.*/
     EC_INSTANCE_COUNT_OVER_LIMIT = -20008,
-    /**Interface InitLicenseFromDLS has to be called before creating any SDK objects.*/
     /**Trial License*/
     EC_TRIAL_LICENSE = -20010,
     /**The license is not valid for current version*/
@@ -164,12 +169,8 @@ export declare enum EnumErrorCode {
     /**Character Model file is not found*/
     EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
     /**-50000~-59999: DDN error code*/
-    /**No content has been detected.*/
     EC_QUADRILATERAL_INVALID = -50057,
     /**-60000~-69999: DCE error code*/
-    EC_CAMERA_MODULE_NOT_EXIST = -60003,
-    EC_CAMERA_ID_NOT_EXIST = -60006,
-    EC_NO_SENSOR = -60045,
     /**-70000~-79999: Panorama error code*/
     /**The panorama license is invalid.*/
     EC_PANORAMA_LICENSE_INVALID = -70060,
