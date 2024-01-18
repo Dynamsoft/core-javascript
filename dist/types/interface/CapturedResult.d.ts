@@ -7,4 +7,3 @@ export interface CapturedResult {
     readonly errorCode: number;
     readonly errorString: string;
 }
-//# sourceMappingURL=CapturedResult.d.ts.map

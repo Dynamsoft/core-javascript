@@ -5,4 +5,3 @@ export interface Arc {
     startAngle: number;
     endAngle: number;
 }
-//# sourceMappingURL=Arc.d.ts.map

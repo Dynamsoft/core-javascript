@@ -8,4 +8,3 @@ export declare enum EnumSectionType {
     ST_DOCUMENT_DETECTION = 6,
     ST_DOCUMENT_NORMALIZATION = 7
 }
-//# sourceMappingURL=EnumSectionType.d.ts.map

@@ -116,4 +116,3 @@ export default class CoreModule {
     static cfd(count: number): Promise<void>;
 }
 export {};
-//# sourceMappingURL=CoreModule.d.ts.map

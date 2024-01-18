@@ -9,4 +9,3 @@ export interface ImageSourceErrorListener {
      */
     onErrorReceived: (errorCode: EnumErrorCode, errorMessage: string) => void;
 }
-//# sourceMappingURL=ImageSourceErrorListener.d.ts.map

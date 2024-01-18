@@ -10,4 +10,3 @@ export declare enum EnumGrayscaleTransformationMode {
     /**Reserved setting for grayscale transformation mode.*/
     GTM_REV = -2147483648
 }
-//# sourceMappingURL=EnumGrayscaleTransformationMode.d.ts.map

@@ -1,6 +1,6 @@
 {
   "name": "dynamsoft-core",
-  "version": "3.0.30",
+  "version": "3.0.31",
   "description": "The Dynamsoft Core module builds the foundation upon which Dynamsoft SDKs implement their functionality.",
   "homepage": "https://dynamsoft.com/capture-vision/docs/web/programming/javascript/?ver=latest",
   "main": "dist/core.js",

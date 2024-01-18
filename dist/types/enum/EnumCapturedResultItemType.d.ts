@@ -6,4 +6,3 @@ export declare enum EnumCapturedResultItemType {
     CRIT_NORMALIZED_IMAGE = 16,
     CRIT_PARSED_RESULT = 32
 }
-//# sourceMappingURL=EnumCapturedResultItemType.d.ts.map

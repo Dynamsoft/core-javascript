@@ -15,4 +15,3 @@ export declare enum EnumImagePixelFormat {
     IPF_BINARY_8 = 13,
     IPF_NV12 = 14
 }
-//# sourceMappingURL=EnumImagePixelFormat.d.ts.map

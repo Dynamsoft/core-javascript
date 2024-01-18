@@ -9,4 +9,3 @@ export declare enum EnumRegionObjectElementType {
     ROET_SOURCE_IMAGE = 7,
     ROET_TARGET_ROI = 8
 }
-//# sourceMappingURL=EnumRegionObjectElementType.d.ts.map

@@ -52,4 +52,3 @@ export default abstract class ImageSourceAdapter {
     setColourChannelUsageType(type: EnumColourChannelUsageType): void;
     getColourChannelUsageType(): EnumColourChannelUsageType;
 }
-//# sourceMappingURL=ImageSourceAdapter.d.ts.map

@@ -4,4 +4,3 @@ export interface PDFReadingParameter {
     dpi: number;
     rasterDataSource: EnumRasterDataSource;
 }
-//# sourceMappingURL=PDFReadingParameter.d.ts.map

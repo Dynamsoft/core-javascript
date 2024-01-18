@@ -4,4 +4,3 @@ export interface FileImageTag extends ImageTag {
     pageNumber: number;
     totalPages: number;
 }
-//# sourceMappingURL=FileImageTag.d.ts.map

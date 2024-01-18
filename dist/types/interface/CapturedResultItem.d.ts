@@ -3,4 +3,3 @@ export interface CapturedResultItem {
     readonly type: EnumCapturedResultItemType;
     readonly referenceItem: CapturedResultItem;
 }
-//# sourceMappingURL=CapturedResultItem.d.ts.map

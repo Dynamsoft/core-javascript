@@ -37,4 +37,3 @@ export * from "./TextureRemovedBinaryImageUnit";
 export * from "./TextureRemovedGrayscaleImageUnit";
 export * from "./TextZonesUnit";
 export * from "./TransformedGrayscaleImageUnit";
-//# sourceMappingURL=index.d.ts.map

@@ -5,4 +5,3 @@ export interface Rect {
     height: number;
     isMeasuredInPercentage?: boolean;
 }
-//# sourceMappingURL=Rect.d.ts.map

@@ -12,4 +12,3 @@ export * from "./EnumColourChannelUsageType";
 export * from "./EnumIntermediateResultUnitType";
 export * from "./EnumRegionObjectElementType";
 export * from "./EnumSectionType";
-//# sourceMappingURL=index.d.ts.map
