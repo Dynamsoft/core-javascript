@@ -14,4 +14,3 @@ export declare enum EnumGrayscaleEnhancementMode {
     /**Skips image preprocessing. */
     GEM_REV = -2147483648
 }
-//# sourceMappingURL=EnumGrayscaleEnhancementMode.d.ts.map

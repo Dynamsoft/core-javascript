@@ -9,4 +9,3 @@ export declare enum EnumPDFReadingMode {
     PDFRM_RASTER = 2,
     PDFRM_REV = -2147483648
 }
-//# sourceMappingURL=EnumPDFReadingMode.d.ts.map

@@ -8,4 +8,3 @@ export interface DSImageData {
     format: EnumImagePixelFormat;
     tag?: ImageTag;
 }
-//# sourceMappingURL=DSImageData.d.ts.map

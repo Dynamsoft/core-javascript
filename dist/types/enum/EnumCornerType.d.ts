@@ -4,4 +4,3 @@ export declare enum EnumCornerType {
     CT_CROSS_INTERSECTED = 2,
     CT_NOT_INTERSECTED = 3
 }
-//# sourceMappingURL=EnumCornerType.d.ts.map

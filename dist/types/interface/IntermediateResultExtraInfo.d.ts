@@ -5,4 +5,3 @@ export interface IntermediateResultExtraInfo {
     isSectionLevelResult: boolean;
     sectionType: EnumSectionType;
 }
-//# sourceMappingURL=IntermediateResultExtraInfo.d.ts.map

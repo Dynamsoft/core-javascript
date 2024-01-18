@@ -6,4 +6,3 @@ export declare enum EnumColourChannelUsageType {
     CCUT_RGB_G_CHANNEL_ONLY = 4,
     CCUT_RGB_B_CHANNEL_ONLY = 5
 }
-//# sourceMappingURL=EnumColourChannelUsageType.d.ts.map

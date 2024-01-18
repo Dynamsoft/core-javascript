@@ -75,4 +75,3 @@ export declare const isQuad: (value: any) => value is Quadrilateral;
  * @ignore
  */
 export declare const isRect: (value: any) => value is Rect;
-//# sourceMappingURL=TypeCheck.d.ts.map

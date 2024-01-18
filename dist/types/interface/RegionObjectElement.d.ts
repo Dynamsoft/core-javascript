@@ -11,4 +11,3 @@ export interface RegionObjectElement {
     referencedElement: RegionObjectElement;
     elementType: EnumRegionObjectElementType;
 }
-//# sourceMappingURL=RegionObjectElement.d.ts.map

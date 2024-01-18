@@ -12,4 +12,3 @@ export interface IntermediateResultUnit {
      */
     getTransformMatrix: (matrixType: EnumTransformMatrixType) => Array<number>;
 }
-//# sourceMappingURL=IntermediateResultUnit.d.ts.map

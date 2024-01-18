@@ -7,4 +7,3 @@ export interface Corner {
     line1: LineSegment;
     Line2: LineSegment;
 }
-//# sourceMappingURL=Corner.d.ts.map
