@@ -1,6 +1,6 @@
 {
   "name": "dynamsoft-core",
-  "version": "3.0.31",
+  "version": "3.0.32",
   "description": "The Dynamsoft Core module builds the foundation upon which Dynamsoft SDKs implement their functionality.",
   "homepage": "https://dynamsoft.com/capture-vision/docs/web/programming/javascript/?ver=latest",
   "main": "dist/core.js",
@@ -73,7 +73,7 @@
     "easyPublish": "npm run update:dev && npm run build-dev && node ./compressCore.js && npm publish"
   },
   "devDependencies": {
-    "@dynamsoft/rd2-scripts": "^0.1.4",
+    "@dynamsoft/rd2-scripts": "^0.1.8",
     "@dynamsoft/tools": "^0.0.1",
     "@rollup/plugin-node-resolve": "^15.0.1",
     "@rollup/plugin-replace": "^5.0.2",
@@ -81,7 +81,7 @@
     "@rollup/plugin-typescript": "^11.0.0",
     "@scannerproxy/browser-info": "^2.0.8",
     "@scannerproxy/curscript-path": "^2.0.1",
-    "@scannerproxy/dlsjs": "^3.0.16",
+    "@scannerproxy/dlsjs": "^3.0.17",
     "@types/node": "^20.4.2",
     "detect-browser-node-ssr": "^3.0.2",
     "eruda": "^3.0.0",
