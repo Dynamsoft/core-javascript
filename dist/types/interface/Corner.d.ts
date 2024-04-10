@@ -5,5 +5,5 @@ export interface Corner {
     type: EnumCornerType;
     intersection: Point;
     line1: LineSegment;
-    Line2: LineSegment;
+    line2: LineSegment;
 }

@@ -1,5 +1,5 @@
 import { IntermediateResultUnit } from "./IntermediateResultUnit";
-import { Quadrilateral } from "./Quadrilateral";
+import { TextZone } from "./TextZone";
 export interface TextZonesUnit extends IntermediateResultUnit {
-    textZones: Array<Quadrilateral>;
+    textZones: Array<TextZone>;
 }

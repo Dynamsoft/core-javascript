@@ -1,4 +1,3 @@
-export * from "./CapturedResult";
 export * from "./OriginalImageResultItem";
 export * from "./CapturedResultItem";
 export * from "./Contour";
@@ -31,9 +30,11 @@ export * from "./PredetectedRegionElement";
 export * from "./PredetectedRegionsUnit";
 export * from "./RegionObjectElement";
 export * from "./ScaledDownColourImageUnit";
+export * from "./ShortLinesUnit";
 export * from "./TextRemovedBinaryImageUnit";
 export * from "./TextureDetectionResultUnit";
 export * from "./TextureRemovedBinaryImageUnit";
 export * from "./TextureRemovedGrayscaleImageUnit";
 export * from "./TextZonesUnit";
 export * from "./TransformedGrayscaleImageUnit";
+export * from "./ObservationParameters";
