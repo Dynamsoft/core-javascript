@@ -1,190 +1,205 @@
+/**
+ * `ErrorCode` enumerates the specific error codes that the SDK may return, providing a systematic way to identify and handle errors encountered during its operation.
+ */
 export declare enum EnumErrorCode {
-    /**Successful. */
+    /** Operation completed successfully. */
     EC_OK = 0,
-    /** -10000~-19999: Common error code. */
-    /**Unknown error. */
+    /** An unspecified error occurred. */
     EC_UNKNOWN = -10000,
-    /**Not enough memory to perform the operation. */
+    /** The system does not have enough memory to perform the requested operation. */
     EC_NO_MEMORY = -10001,
-    /**Null pointer */
+    /** A null pointer was encountered where a valid pointer was required. */
     EC_NULL_POINTER = -10002,
-    /**License invalid*/
+    /** The provided license is not valid. */
     EC_LICENSE_INVALID = -10003,
-    /**License expired*/
+    /** The provided license has expired. */
     EC_LICENSE_EXPIRED = -10004,
-    /**File not found*/
+    /** The specified file could not be found. */
     EC_FILE_NOT_FOUND = -10005,
-    /**The file type is not supported. */
+    /** The file type is not supported for processing. */
     EC_FILE_TYPE_NOT_SUPPORTED = -10006,
-    /**The BPP (Bits Per Pixel) is not supported. */
+    /** The image's bits per pixel (BPP) is not supported. */
     EC_BPP_NOT_SUPPORTED = -10007,
-    /**The index is invalid.*/
+    /** The specified index is out of the valid range. */
     EC_INDEX_INVALID = -10008,
-    /**The input region value parameter is invalid.*/
+    /** The specified custom region value is invalid or out of range. */
     EC_CUSTOM_REGION_INVALID = -10010,
-    /**Failed to read the image. */
+    /** Failed to read the image due to an error in accessing or interpreting the image data. */
     EC_IMAGE_READ_FAILED = -10012,
-    /**Failed to read the TIFF image. */
+    /** Failed to read a TIFF image, possibly due to corruption or unsupported format. */
     EC_TIFF_READ_FAILED = -10013,
-    /**The DIB (Device-Independent Bitmaps) buffer is invalid. */
+    /** The provided DIB (Device-Independent Bitmaps) buffer is invalid or corrupted. */
     EC_DIB_BUFFER_INVALID = -10018,
-    /**Failed to read the PDF image. */
+    /** Failed to read a PDF image, possibly due to corruption or unsupported format. */
     EC_PDF_READ_FAILED = -10021,
-    /**The PDF DLL is missing. */
+    /** Required PDF processing DLL is missing. */
     EC_PDF_DLL_MISSING = -10022,
-    /**The page number is invalid. */
+    /** The specified page number is invalid or out of bounds for the document. */
     EC_PAGE_NUMBER_INVALID = -10023,
-    /**The custom size is invalid. */
+    /** The specified custom size is invalid or not supported. */
     EC_CUSTOM_SIZE_INVALID = -10024,
-    /** timeout. */
+    /** The operation timed out. */
     EC_TIMEOUT = -10026,
-    /**Json parse failed*/
+    /** Failed to parse JSON input. */
     EC_JSON_PARSE_FAILED = -10030,
-    /**Json type invalid*/
+    /** The JSON type is invalid for the expected context. */
     EC_JSON_TYPE_INVALID = -10031,
-    /**Json key invalid*/
+    /** The JSON key is invalid or unrecognized in the current context. */
     EC_JSON_KEY_INVALID = -10032,
-    /**Json value invalid*/
+    /** The JSON value is invalid for the specified key. */
     EC_JSON_VALUE_INVALID = -10033,
-    /**Json name key missing*/
+    /** The required "Name" key is missing in the JSON data. */
     EC_JSON_NAME_KEY_MISSING = -10034,
-    /**The value of the key "Name" is duplicated.*/
+    /** The value of the "Name" key is duplicated and conflicts with existing data. */
     EC_JSON_NAME_VALUE_DUPLICATED = -10035,
-    /**Template name invalid*/
+    /** The template name is invalid or does not match any known template. */
     EC_TEMPLATE_NAME_INVALID = -10036,
-    /**The name reference is invalid.*/
+    /** The reference made by the "Name" key is invalid or points to nonexistent data. */
     EC_JSON_NAME_REFERENCE_INVALID = -10037,
-    /**Parameter value invalid*/
+    /** The parameter value provided is invalid or out of the expected range. */
     EC_PARAMETER_VALUE_INVALID = -10038,
-    /**The domain of your current site does not match the domain bound in the current product key.*/
+    /** The domain of the current site does not match the domain bound to the current product key. */
     EC_DOMAIN_NOT_MATCH = -10039,
-    /**The reserved info does not match the reserved info bound in the current product key.*/
+    /** The reserved information does not match the reserved info bound to the current product key. */
     EC_RESERVED_INFO_NOT_MATCH = -10040,
-    /**The license key does not match the license content.*/
+    /** The license key does not match the license content. */
     EC_LICENSE_KEY_NOT_MATCH = -10043,
-    /**Failed to request the license content.*/
+    /** Failed to request the license content from the server. */
     EC_REQUEST_FAILED = -10044,
-    /**Failed to init the license.*/
+    /** Failed to initialize the license. */
     EC_LICENSE_INIT_FAILED = -10045,
-    /**Failed to set mode's argument.*/
+    /** Error setting the mode's argument, indicating invalid or incompatible arguments. */
     EC_SET_MODE_ARGUMENT_ERROR = -10051,
-    /**The license content is invalid.*/
+    /** The license content is invalid or corrupted. */
     EC_LICENSE_CONTENT_INVALID = -10052,
-    /**The license key is invalid.*/
+    /** The license key is invalid or does not match any known valid keys. */
     EC_LICENSE_KEY_INVALID = -10053,
-    /**The license key has no remaining quota.*/
+    /** The license key has reached its maximum allowed usage and has no remaining quota. */
     EC_LICENSE_DEVICE_RUNS_OUT = -10054,
-    /**Failed to get mode's argument.*/
+    /** Failed to retrieve the mode's argument, possibly due to invalid state or configuration. */
     EC_GET_MODE_ARGUMENT_ERROR = -10055,
-    /**The Intermediate Result Types license is invalid.*/
+    /** The Intermediate Result Types (IRT) license is invalid or not present. */
     EC_IRT_LICENSE_INVALID = -10056,
-    /**Failed to save file.*/
+    /** Failed to save the file, possibly due to permissions, space, or an invalid path. */
     EC_FILE_SAVE_FAILED = -10058,
-    /**The stage type is invalid.*/
+    /** The specified stage type is invalid or not supported in the current context. */
     EC_STAGE_TYPE_INVALID = -10059,
-    /**The image orientation is invalid.*/
+    /** The specified image orientation is invalid or not supported. */
     EC_IMAGE_ORIENTATION_INVALID = -10060,
-    /**Failed to convert complex tempalte to simplified settings.*/
+    /** Failed to convert complex template to simplified settings, indicating a configuration or compatibility issue. */
     EC_CONVERT_COMPLEX_TEMPLATE_ERROR = -10061,
-    /**Reject function call while capturing in progress.*/
+    /** Rejecting function call while capturing is in progress, to prevent conflicts or data corruption. */
     EC_CALL_REJECTED_WHEN_CAPTURING = -10062,
-    /**The input image source was not found.*/
+    /** The specified image source was not found, indicating a missing or inaccessible input source. */
     EC_NO_IMAGE_SOURCE = -10063,
-    /**Failed to read directory.*/
+    /** Failed to read the directory, possibly due to permissions, non-existence, or other access issues. */
     EC_READ_DIRECTORY_FAILED = -10064,
-    /**[Name] Module not found.*/
-    /**Name : */
-    /**DynamsoftBarcodeReader*/
-    /**DynamsoftLabelRecognizer*/
-    /**DynamsoftDocumentNormalizer*/
+    /** A required module (e.g., DynamsoftBarcodeReader, DynamsoftLabelRecognizer) was not found. */
     EC_MODULE_NOT_FOUND = -10065,
-    /**The api does not support multi-page files. Please use FileFetcher instead.*/
+    /** The operation does not support multi-page files; use FileFetcher for processing such files. */
     EC_MULTI_PAGES_NOT_SUPPORTED = -10066,
-    /**The file already exists but overwriting is disabled.*/
+    /** Indicates an attempt to write to a file that already exists, with overwriting explicitly disabled. This error suggests the need for either enabling overwriting or ensuring unique file names to avoid conflicts. */
     EC_FILE_ALREADY_EXISTS = -10067,
-    /**The file path does not exist but cannot be created, or cannot be created for any other reason.*/
+    /** The specified file path does not exist and could not be created. This error could be due to insufficient permissions, a read-only filesystem, or other environmental constraints preventing file creation. */
     EC_CREATE_FILE_FAILED = -10068,
-    /**The input ImageData object contains invalid parameter(s).*/
-    EC_IMAGE_DATA_INVALID = -10069,
-    /**The dimensions of the input image do not meet the requirements.*/
-    /**The pixel format of the input image do not meet the requirements.*/
-    /**The section level result is irreplaceable.*/
-    /** -20000~-29999: DLS license error code. */
-    /**No license.*/
+    /** The input ImageData object contains invalid parameters. This could be due to incorrect data types, out-of-range values, or improperly formatted data being passed to a function expecting ImageData. */
+    EC_IMGAE_DATA_INVALID = -10069,
+    /** The size of the input image does not meet the requirements. */
+    EC_IMAGE_SIZE_NOT_MATCH = -10070,
+    /** The pixel format of the input image does not meet the requirements. */
+    EC_IMAGE_PIXEL_FORMAT_NOT_MATCH = -10071,
+    /** The section level result is irreplaceable. */
+    EC_SECTION_LEVEL_RESULT_IRREPLACEABLE = -10072,
+    /** Incorrect axis definition. */
+    EC_AXIS_DEFINITION_INCORRECT = -10073,
+    /**The result is not replaceable due to type mismatch*/
+    EC_RESULT_TYPE_MISMATCH_IRREPLACEABLE = -10074,
+    /** Indicates no license is available or the license is not set. */
     EC_NO_LICENSE = -20000,
-    /**The Handshake Code is invalid.*/
+    /** The provided Handshake Code is invalid or does not match expected format. */
     EC_HANDSHAKE_CODE_INVALID = -20001,
-    /**Failed to read or write license buffer. */
+    /** Encountered failures while attempting to read or write to the license buffer. */
     EC_LICENSE_BUFFER_FAILED = -20002,
-    /**Failed to synchronize license info with license server. */
+    /** Synchronization with the license server failed, possibly due to network issues or server unavailability. */
     EC_LICENSE_SYNC_FAILED = -20003,
-    /**Device dose not match with buffer. */
+    /** The device attempting to use the license does not match the device specified in the license buffer. */
     EC_DEVICE_NOT_MATCH = -20004,
-    /**Failed to bind device. */
+    /** Binding the device to the license failed, indicating possible issues with the license or device identifier. */
     EC_BIND_DEVICE_FAILED = -20005,
-    /**Instance count is over limit.*/
+    /** The number of instances using the license exceeds the limit allowed by the license terms. */
     EC_INSTANCE_COUNT_OVER_LIMIT = -20008,
-    /**Trial License*/
+    /** InitLicenseFromDLS must be called before any SDK objects are created to ensure proper license initialization. */
+    EC_LICENSE_INIT_SEQUENCE_FAILED = -20009,
+    /** Indicates the license in use is a trial version with limited functionality or usage time. */
     EC_TRIAL_LICENSE = -20010,
-    /**The license is not valid for current version*/
-    EC_LICENSE_VERSION_NOT_MATCH = -20011,
-    /**Failed to reach License Server.*/
+    /** The system failed to reach the License Server, likely due to network connectivity issues. */
     EC_FAILED_TO_REACH_DLS = -20200,
-    /**-30000~-39999: DBR error code*/
-    /**The barcode format is invalid.*/
+    /** Online license validation failed due to network issues. Using cached license information for validation.*/
+    EC_LICENSE_CACHE_USED = -20012,
+    /** The specified barcode format is invalid or unsupported. */
     EC_BARCODE_FORMAT_INVALID = -30009,
-    /**The QR Code license is invalid.*/
+    /** The license for decoding QR Codes is invalid or not present. */
     EC_QR_LICENSE_INVALID = -30016,
-    /**The 1D Barcode license is invalid.*/
+    /** The license for decoding 1D barcodes is invalid or not present. */
     EC_1D_LICENSE_INVALID = -30017,
-    /**The PDF417 license is invalid.*/
+    /** The license for decoding PDF417 barcodes is invalid or not present. */
     EC_PDF417_LICENSE_INVALID = -30019,
-    /**The DATAMATRIX license is invalid. */
+    /** The license for decoding DataMatrix barcodes is invalid or not present. */
     EC_DATAMATRIX_LICENSE_INVALID = -30020,
-    /**The custom module size is invalid. */
+    /** The specified custom module size for barcode generation is invalid or outside acceptable limits. */
     EC_CUSTOM_MODULESIZE_INVALID = -30025,
-    /**The AZTEC license is invalid.*/
+    /** The license for decoding Aztec barcodes is invalid or not present. */
     EC_AZTEC_LICENSE_INVALID = -30041,
-    /**The Patchcode license is invalid.*/
+    /** The license for decoding Patchcode barcodes is invalid or not present. */
     EC_PATCHCODE_LICENSE_INVALID = -30046,
-    /**The Postal code license is invalid.*/
+    /** The license for decoding postal code formats is invalid or not present. */
     EC_POSTALCODE_LICENSE_INVALID = -30047,
-    /**The DPM license is invalid.*/
+    /** The license for Direct Part Marking (DPM) decoding is invalid or not present. */
     EC_DPM_LICENSE_INVALID = -30048,
-    /**The frame decoding thread already exists.*/
+    /** A frame decoding thread is already running, indicating a concurrent operation conflict. */
     EC_FRAME_DECODING_THREAD_EXISTS = -30049,
-    /**Failed to stop the frame decoding thread.*/
+    /** Stopping the frame decoding thread failed, indicating potential issues with thread management. */
     EC_STOP_DECODING_THREAD_FAILED = -30050,
-    /**The Maxicode license is invalid.*/
+    /** The license for decoding MaxiCode barcodes is invalid or not present. */
     EC_MAXICODE_LICENSE_INVALID = -30057,
-    /**The GS1 Databar license is invalid.*/
+    /** The license for decoding GS1 DataBar barcodes is invalid or not present. */
     EC_GS1_DATABAR_LICENSE_INVALID = -30058,
-    /**The GS1 Composite code license is invalid.*/
+    /** The license for decoding GS1 Composite codes is invalid or not present. */
     EC_GS1_COMPOSITE_LICENSE_INVALID = -30059,
-    /**The DotCode license is invalid.*/
+    /** The license for decoding DotCode barcodes is invalid or not present. */
     EC_DOTCODE_LICENSE_INVALID = -30061,
-    /**The Pharmacode license is invalid.*/
+    /** The license for decoding Pharmacode barcodes is invalid or not present. */
     EC_PHARMACODE_LICENSE_INVALID = -30062,
-    /**-40000~-49999: DLR error code*/
-    /**Character Model file is not found*/
+    /** Indicates that the required character model file was not found, possibly due to incorrect paths or missing files. */
     EC_CHARACTER_MODEL_FILE_NOT_FOUND = -40100,
-    /**-50000~-59999: DDN error code*/
+    /**There is a conflict in the layout of TextLineGroup. */
+    EC_TEXT_LINE_GROUP_LAYOUT_CONFLICT = -40101,
+    /**There is a conflict in the regex of TextLineGroup. */
+    EC_TEXT_LINE_GROUP_REGEX_CONFLICT = -40102,
+    /** The specified quadrilateral is invalid, potentially due to incorrect points or an unprocessable shape. */
     EC_QUADRILATERAL_INVALID = -50057,
-    /**-60000~-69999: DCE error code*/
-    /**-70000~-79999: Panorama error code*/
-    /**The panorama license is invalid.*/
+    /** The license for generating or processing panoramas is invalid or missing. */
     EC_PANORAMA_LICENSE_INVALID = -70060,
-    /**-80000~-89999: Reserved error code*/
-    /**-90000~-99999: DCP error code*/
+    /** The specified resource path does not exist, indicating a missing directory or incorrect path specification. */
     EC_RESOURCE_PATH_NOT_EXIST = -90001,
+    /** Failed to load the specified resource, which might be due to missing files, access rights, or other issues preventing loading. */
     EC_RESOURCE_LOAD_FAILED = -90002,
+    /** The code specification required for processing was not found, indicating a missing or incorrect specification. */
     EC_CODE_SPECIFICATION_NOT_FOUND = -90003,
+    /** The full code string provided is empty, indicating no data was provided for processing. */
     EC_FULL_CODE_EMPTY = -90004,
+    /** Preprocessing the full code string failed, possibly due to invalid format, corruption, or unsupported features. */
     EC_FULL_CODE_PREPROCESS_FAILED = -90005,
+    /** The license required for parsing South Africa Driver License data is invalid or not present. */
     EC_ZA_DL_LICENSE_INVALID = -90006,
+    /** The license required for parsing North America DL/ID (AAMVA) data is invalid or not present. */
     EC_AAMVA_DL_ID_LICENSE_INVALID = -90007,
+    /** The license required for parsing Aadhaar data is invalid or not present. */
     EC_AADHAAR_LICENSE_INVALID = -90008,
+    /** The license required for parsing Machine Readable Travel Documents (MRTD) is invalid or not present. */
     EC_MRTD_LICENSE_INVALID = -90009,
+    /** The license required for parsing Vehicle Identification Number (VIN) data is invalid or not present. */
     EC_VIN_LICENSE_INVALID = -90010,
+    /** The license required for parsing customized code types is invalid or not present. */
     EC_CUSTOMIZED_CODE_TYPE_LICENSE_INVALID = -90011
 }

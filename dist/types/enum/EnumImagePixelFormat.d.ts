@@ -13,5 +13,6 @@ export declare enum EnumImagePixelFormat {
     IPF_ABGR_16161616 = 11,
     IPF_BGR_888 = 12,
     IPF_BINARY_8 = 13,
-    IPF_NV12 = 14
+    IPF_NV12 = 14,
+    IPF_BINARY_8_INVERTED = 15
 }

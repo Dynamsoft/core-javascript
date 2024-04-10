@@ -1,11 +1,13 @@
 export declare const mapAsyncDependency: {
     [key: string]: any;
 };
+/** @deprecated Pls use doOrWaitAsyncDependency, which has better error catching */
 export declare const newAsyncDependency: (depName: string) => {
     p: any;
     justWait: boolean;
 };
-export declare const waitAsyncDependency: (depName: string) => any;
+export declare const waitAsyncDependency: (depName: string | string[]) => Promise<void>;
+export declare const doOrWaitAsyncDependency: (depName: string | string[], asyncFunc: () => Promise<void>) => Promise<void>;
 export declare let worker: Worker;
 export declare const getNextTaskID: () => number;
 export declare const mapTaskCallBack: {
@@ -38,7 +40,7 @@ interface ProxyEngineResourcePaths {
     "ddn"?: string;
     "dcp"?: string;
     "dce"?: string;
-    "dcm"?: string;
+    "dlrData"?: string;
     [moduleName: string]: string | undefined;
 }
 export declare const engineResourcePaths: {
@@ -67,7 +69,7 @@ export declare const engineResourcePaths: {
     "ddn"?: string;
     "dcp"?: string;
     "dce"?: string;
-    "dcm"?: string;
+    "dlrData"?: string;
     [moduleName: string]: string | {
         version: string;
         path: string;
@@ -77,9 +79,10 @@ export declare const workerAutoResources: {
     [key: string]: {
         js?: string[] | boolean;
         wasm?: string[] | boolean;
+        deps?: string[];
     };
 };
-export declare const loadWasm: (names?: string[] | string) => Promise<any>;
+export declare const loadWasm: (names?: string[] | string) => Promise<void>;
 export default class CoreModule {
     static get engineResourcePaths(): ProxyEngineResourcePaths;
     static set engineResourcePaths(value: ProxyEngineResourcePaths);
@@ -89,8 +92,8 @@ export default class CoreModule {
     static get bSupportIRTModule(): number;
     private static _versions;
     static get versions(): any;
-    static get onLog(): (message: any) => void;
-    static set onLog(value: (message: any) => void);
+    static get _onLog(): (message: any) => void;
+    static set _onLog(value: (message: any) => void);
     static get _bDebug(): boolean;
     static set _bDebug(value: boolean);
     static _workerName: string;
@@ -99,7 +102,7 @@ export default class CoreModule {
      * @category Initialize and Destroy
      */
     static isModuleLoaded(name?: string): boolean;
-    static loadWasm(names: string[] | string): Promise<any>;
+    static loadWasm(names: string[] | string): Promise<void>;
     /**
      * Detect environment and get a report.
      */
